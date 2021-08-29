@@ -5,6 +5,13 @@ const server = app.listen(3000);
 
 app.set('view engine','ejs');
 
+app.use((req,res,next)=>{
+    console.log("\nNew request is made");
+    console.log("Host : ",req.hostname);
+    console.log("Path : ",req.path);
+    console.log("Method : ",req.method);
+    next();
+});
 
 app.get('/',(req,res)=>{
     // res.send('<h1>Home</h1>');
