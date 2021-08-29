@@ -7,7 +7,7 @@ const server = http.createServer((req,res)=>{
     const num = lodash.random(1,6);
     console.log(num);
     res.setHeader('Content-type','text/html');
-    let url = "";
+    let url = "./html/";
     switch(req.url){
         case '/' :{
             url+='index.html';
