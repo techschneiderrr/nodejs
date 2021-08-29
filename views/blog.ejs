@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <style>
         html {
   height: 100%;
@@ -30,7 +29,7 @@ body {
   border-radius: 10px;
 }
 
-.login-box h2, h4 {
+.login-box h2 {
   margin: 0 0 30px;
   padding: 0;
   color: #fff;
@@ -178,30 +177,25 @@ body {
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/index">Blogs&more</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/index">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/blog">Blogs</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
     <div class="login-box">
-        <h2 style="font-weight: 400;font-size: 28px;">Login</h2>
-        <h4 style="text-align: justify;font-weight: 300;font-size: 22px;">This website is made by <br><span style="color:darkgoldenrod;">Manav Deep Singh Lamba</span>, to ensure the learning of Node.js. <br><br>P.S. I hope this works out well.</h4>
+        <h2>Login</h2>
+        <form>
+          <div class="user-box">
+            <input type="text" name="" required="">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="" required="">
+            <label>Password</label>
+          </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
       </div>
 </body>
 </html>
