@@ -15,7 +15,6 @@ mongoose.connect(dbURI,{useNewUrlParser:true,useUnifiedTopology:true})
     console.log('\n',err);
 })
 
-
 app.set('view engine','ejs');
 
 app.use(morgan('dev'));
@@ -38,6 +37,30 @@ app.get('/blog',(req,res)=>{
         {title:'Why is khanna not so great?', content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "}
     ];
     res.render('blog',{blog});
+});
+
+app.get('/all-blogs',(req,res)=>{
+    Blog.find()
+    .then((result)=>{
+        res.send(result)
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+});
+
+app.get('/create-blog',(req,res)=>{
+    const blog = new Blog({
+        title: 'New blog',
+        content:'Hello world this is manav'
+    })
+    blog.save()
+    .then((results)=>{
+        res.send(results);
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
 });
 
 app.use((req,res)=>{
